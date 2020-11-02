@@ -30,7 +30,7 @@ public class SubredditService {
     }
 
     @Transactional(readOnly = true)
-    protected List<SubredditDto> getAll() {
+    public List<SubredditDto> getAll() {
         return subredditRepository.findAll()
                 .stream()
                 .map(subredditMapper::mapSubredditToDto)
